@@ -22,7 +22,11 @@ public class ex1046_tempo_de_jogo {
 		fim = input.nextInt();
 
 		if ((inicio <= 24)) {
-			duracao = 24 - inicio + fim;
+			if (fim >= 12) {
+				duracao = inicio - fim;
+			}else {
+				duracao = 24 - inicio + fim;
+			}
 		}
 		System.out.println("O JOGO DUROU " + duracao + " HORA(S)");
 
